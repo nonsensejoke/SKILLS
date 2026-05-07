@@ -1,44 +1,29 @@
 # 🧠 SKILLS
 
-我的 Claude 技能库（Claude Skills Collection）
+我的 Claude Skill 收藏库。每个 Skill 是一段让 Claude 掌握特定工作流的指令文件，可直接安装到 Claude.ai 使用。
 
-> 这里收录了我积累的 Claude 自定义技能（`.skill` 文件），按功能分类整理。
-> 每个技能都可以安装到 Claude.ai，让 Claude 在特定场景下自动采用最佳工作流。
+## 📦 安装方式
 
----
-
-## 📂 目录结构
-
-```
-SKILLS/
-├── web/          # 网页读取、抓取类技能
-├── writing/      # 写作、内容创作类技能
-├── tools/        # 工具集成类技能
-└── ...           # 更多分类持续添加
-```
+下载对应文件夹中的 `.skill` 文件（或直接使用 `SKILL.md`），在 Claude.ai 设置页面中安装。
 
 ---
 
-## 📋 技能索引
+## 📂 分类目录
 
-### 🌐 web — 网页读取 / 抓取
+### 🐦 social-media — 社交媒体
 
-| 技能名 | 描述 | 文件 |
-|--------|------|------|
-| `read-x-post` | 使用 tinyfish 读取 X（Twitter）帖子，默认全文翻译为中文；说「总结」则输出摘要 | [SKILL.md](./web/read-x-post/SKILL.md) |
-
----
-
-## 🚀 如何安装技能
-
-1. 下载对应的 `.skill` 文件
-2. 前往 [Claude.ai](https://claude.ai) → 设置 → 技能（Skills）
-3. 上传 `.skill` 文件即可生效
+| Skill | 描述 | 依赖 |
+|-------|------|------|
+| [read-x-post](./social-media/read-x-post/SKILL.md) | 使用 tinyfish 读取 X (Twitter) 帖子并翻译/总结为中文 | tinyfish MCP |
 
 ---
 
-## 📝 更新记录
+## 📋 更新记录
 
-| 日期 | 变更 |
-|------|------|
-| 2026-05-07 | 🎉 初始化仓库，添加 `read-x-post` 技能 |
+| 日期 | 操作 | Skill |
+|------|------|-------|
+| 2026-05-07 | ✨ 新增 | `social-media/read-x-post` |
+
+---
+
+> 如需添加新 Skill，请在对应分类子文件夹中创建目录，并更新本 README。
