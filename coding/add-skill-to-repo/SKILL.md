@@ -80,8 +80,6 @@ github:get_file_contents
 
 ### 第五步：推送 skill 文件
 
-使用 `github:push_files` 推送 skill 文件：
-
 ```
 github:push_files
   owner: "nonsensejoke"
@@ -95,7 +93,7 @@ github:push_files
 
 ### 第六步：更新 README.md
 
-用 `github:create_or_update_file` 更新 README（必须带 sha）：
+使用 `github:create_or_update_file` 更新 README（必须带第三步获取的 sha）：
 
 ```
 github:create_or_update_file
@@ -108,14 +106,11 @@ github:create_or_update_file
   content: <更新后的完整 README 内容>
 ```
 
-**更新规则：**
-- 若该分类已存在 → 在对应表格末尾追加一行
-- 若该分类不存在 → 在 `## 📂 分类目录` 下新增一个 `###` 小节和表格
-- 更新记录追加到表格顶部（最新在最上）
-
 ---
 
 ## README.md 格式模板
+
+每次更新 README 时，保持以下结构，**追加**新条目，不覆盖旧内容：
 
 ```markdown
 # 🧠 SKILLS
@@ -148,9 +143,14 @@ github:create_or_update_file
 
 | 日期 | 操作 | Skill |
 |------|------|-------|
-| {今天日期} | ✨ 新增 | `{category}/{skill-name}` |
 | 2026-05-07 | ✨ 新增 | `social-media/read-x-post` |
+| {今天日期} | ✨ 新增 | `{category}/{skill-name}` |
 ```
+
+**规则：**
+- 每个分类用三级标题 `###`，包含一个表格
+- 更新记录按时间倒序排列（最新在最上）
+- 如果分类已存在，只在对应表格中追加一行；不要新建重复分类
 
 ---
 
@@ -158,11 +158,11 @@ github:create_or_update_file
 
 **关于 README 更新方式：**
 - 仓库为空时：用 `push_files` 同时创建 skill 文件和 README（一次 commit）
-- 仓库已有 README 时：先 `get_file_contents` 获取 sha → `push_files` 推 skill → `create_or_update_file` 更新 README（带 sha）
+- 仓库已有 README 时：先用 `get_file_contents` 获取 sha，再用 `create_or_update_file` 更新（必须带 sha，否则会报错）
 
 **关于 skill 内容来源：**
-- 对话中刚创建的 skill → 读取 `/home/claude/{skill-name}/SKILL.md`
-- 用户提供 `.skill` 文件 → 解压后读取 SKILL.md
-- 用户直接粘贴内容 → 直接使用
+- 如果对话中刚刚创建了 skill（`/home/claude/{skill-name}/SKILL.md`），直接读取该文件内容
+- 如果用户提供了 `.skill` 文件，解压后读取 SKILL.md
+- 如果用户直接粘贴了 SKILL.md 内容，直接使用
 
 **今天日期：** 推送时使用当前真实日期（格式 YYYY-MM-DD）填入更新记录。
