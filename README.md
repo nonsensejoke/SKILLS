@@ -16,12 +16,19 @@
 |-------|------|------|
 | [read-x-post](./social-media/read-x-post/SKILL.md) | 使用 tinyfish 读取 X (Twitter) 帖子并翻译/总结为中文 | tinyfish MCP |
 
+### ⚙️ coding — 开发工具
+
+| Skill | 描述 | 依赖 |
+|-------|------|------|
+| [add-skill-to-repo](./coding/add-skill-to-repo/SKILL.md) | 将新创建的 Skill 推送到专属 GitHub 仓库并自动更新 README 索引 | GitHub MCP |
+
 ---
 
 ## 📋 更新记录
 
 | 日期 | 操作 | Skill |
 |------|------|-------|
+| 2026-05-07 | ✨ 新增 | `coding/add-skill-to-repo` |
 | 2026-05-07 | ✨ 新增 | `social-media/read-x-post` |
 
 ---
