@@ -21,6 +21,13 @@
 | Skill | 描述 | 依赖 |
 |-------|------|------|
 | [add-skill-to-repo](./coding/add-skill-to-repo/SKILL.md) | 将新创建的 Skill 推送到专属 GitHub 仓库并自动更新 README 索引 | GitHub MCP |
+| [save-to-snippets](./coding/save-to-snippets/SKILL.md) | 将代码片段、脚本或工具保存到 `nonsensejoke/my_code_snippets` 仓库 | GitHub MCP |
+
+### 🔌 mcp — MCP 配置
+
+| Skill | 描述 | 依赖 |
+|-------|------|------|
+| [tinyfish-mcp](./mcp/tinyfish-mcp/SKILL.md) | 为 Hermes Agent 配置 TinyFish MCP（网页搜索 + 页面抓取），含完整 OAuth PKCE 认证流程 | python3, firefox |
 
 ---
 
@@ -28,6 +35,8 @@
 
 | 日期 | 操作 | Skill |
 |------|------|-------|
+| 2026-05-09 | 📝 补充文档 | `coding/save-to-snippets`（已有，首次写入 README） |
+| 2026-05-09 | 📝 补充文档 | `mcp/tinyfish-mcp`（已有，首次写入 README） |
 | 2026-05-07 | ✨ 新增 | `coding/add-skill-to-repo` |
 | 2026-05-07 | ✨ 新增 | `social-media/read-x-post` |
 
