@@ -23,6 +23,12 @@
 | [add-skill-to-repo](./coding/add-skill-to-repo/SKILL.md) | 将新创建的 Skill 推送到专属 GitHub 仓库并自动更新 README 索引 | GitHub MCP |
 | [save-to-snippets](./coding/save-to-snippets/SKILL.md) | 将代码片段、脚本或工具保存到 `nonsensejoke/my_code_snippets` 仓库 | GitHub MCP |
 
+### 📝 productivity — 生产力工具
+
+| Skill | 描述 | 依赖 |
+|-------|------|------|
+| [notion-create-subpage](./productivity/notion-create-subpage/SKILL.md) | 在 Notion 指定页面下创建子页面，采用创建后移动的方式确保层级正确 | Notion MCP |
+
 ### 🔌 mcp — MCP 配置
 
 | Skill | 描述 | 依赖 |
@@ -35,6 +41,7 @@
 
 | 日期 | 操作 | Skill |
 |------|------|-------|
+| 2026-05-11 | ✨ 新增 | `productivity/notion-create-subpage` |
 | 2026-05-09 | 📝 补充文档 | `coding/save-to-snippets`（已有，首次写入 README） |
 | 2026-05-09 | 📝 补充文档 | `mcp/tinyfish-mcp`（已有，首次写入 README） |
 | 2026-05-07 | ✨ 新增 | `coding/add-skill-to-repo` |
